@@ -6,6 +6,8 @@ each endpoint is needed to be configured using config.json
 
 ## Usages
 
+`static` directory is, where static web page need to be stored.
+
 `config.json`
 
 ```json
