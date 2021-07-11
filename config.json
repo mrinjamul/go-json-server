@@ -1,0 +1,6 @@
+{
+  "endpoints": [
+    { "route": "ping", "jsonpath": "jsons/ping.json" },
+    { "route": "hello", "jsonpath": "jsons/hello.json" }
+  ]
+}
