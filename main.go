@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 	"path"
 	"path/filepath"
 
@@ -33,6 +34,12 @@ func main() {
 		port = ":" + config.Port
 	} else {
 		port = ":3000"
+	}
+
+	_, present := os.LookupEnv("PORT")
+	if present {
+		port = ":" + os.Getenv("PORT")
+
 	}
 
 	// This will ensure that the angular files are served correctly

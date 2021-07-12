@@ -25,6 +25,9 @@ In this config, there are two endpoints.
 `route` is the endpoint and `jsonpath` is the json file to be served.
 All json files should be in `jsons` directory.
 
+`staticpath` is the location of static web pages.
+`port` or `PORT` env use for setting server port.
+
 Use config.json to map the API.
 
 After configuration done, run the application by,
