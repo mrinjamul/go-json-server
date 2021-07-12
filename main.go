@@ -45,10 +45,17 @@ func main() {
 			c.File("./" + webpath + "/" + path.Join(dir, file))
 		}
 	})
+	// testing endpoint
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+
+	})
 
 	for _, e := range config.Endpoints {
 		jdata := utils.GetJSON(e.JSONPath)
-		r.GET(e.Route, func(c *gin.Context) {
+		r.GET("/api/"+e.Route, func(c *gin.Context) {
 			c.JSON(200, jdata)
 		})
 	}

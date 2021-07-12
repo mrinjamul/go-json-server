@@ -1,4 +1,4 @@
-fetch("/hello")
+fetch("/api/hello")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -7,7 +7,7 @@ fetch("/hello")
         <p>hello endpoint: ${data.message} </p>
     </div>`;
   });
-fetch("/ping")
+fetch("/api/ping")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);

@@ -15,7 +15,9 @@ each endpoint is needed to be configured using config.json
   "endpoints": [
     { "route": "ping", "jsonpath": "jsons/ping.json" },
     { "route": "hello", "jsonpath": "jsons/hello.json" }
-  ]
+  ],
+  "staticpath": "static",
+  "port": "8080"
 }
 ```
 
@@ -31,6 +33,17 @@ After configuration done, run the application by,
 go build .
 ./go-json-server
 ```
+
+Test API with web at [http://localhost:8080](http://localhost:8080).
+
+## Endpoints
+
+| Methods | Endpoints  | Description                          |
+| ------- | ---------- | ------------------------------------ |
+| GET     | /ping      | Use for ping                         |
+| GET     | /api/ping  | example endpoint                     |
+| GET     | /api/hello | example endpoint                     |
+| GET     | /api/\*    | create \* endpoint from config files |
 
 ## Development
 
