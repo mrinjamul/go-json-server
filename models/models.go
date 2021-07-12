@@ -8,5 +8,7 @@ type Endpoint struct {
 
 // Config is model for all endpoints
 type Config struct {
-	Endpoints []Endpoint `json:"endpoints"`
+	Endpoints  []Endpoint `json:"endpoints"`
+	StaticPath string     `json:"staticpath"`
+	Port       string     `json:"port"`
 }

@@ -2,5 +2,7 @@
   "endpoints": [
     { "route": "ping", "jsonpath": "jsons/ping.json" },
     { "route": "hello", "jsonpath": "jsons/hello.json" }
-  ]
+  ],
+  "staticpath": "static",
+  "port": "8080"
 }

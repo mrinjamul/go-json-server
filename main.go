@@ -12,23 +12,40 @@ import (
 func main() {
 	r := gin.Default()
 
+	config, err := utils.ReadConfig()
+	if err != nil {
+		log.Fatalln(err)
+	}
+
 	r.Use(CORSMiddleware())
+
+	var (
+		webpath string
+		port    string
+	)
+
+	if config.StaticPath != "" {
+		webpath = config.StaticPath
+	} else {
+		webpath = "static"
+	}
+	if config.Port != "" {
+		port = ":" + config.Port
+	} else {
+		port = ":3000"
+	}
 
 	// This will ensure that the angular files are served correctly
 	r.NoRoute(func(c *gin.Context) {
 		dir, file := path.Split(c.Request.RequestURI)
 		ext := filepath.Ext(file)
 		if file == "" || ext == "" {
-			c.File("./static/index.html")
+			c.File("./" + webpath + "/index.html")
 		} else {
-			c.File("./static/" + path.Join(dir, file))
+			c.File("./" + webpath + "/" + path.Join(dir, file))
 		}
 	})
 
-	config, err := utils.ReadConfig()
-	if err != nil {
-		log.Fatalln(err)
-	}
 	for _, e := range config.Endpoints {
 		jdata := utils.GetJSON(e.JSONPath)
 		r.GET(e.Route, func(c *gin.Context) {
@@ -36,7 +53,7 @@ func main() {
 		})
 	}
 
-	r.Run()
+	r.Run(port)
 }
 
 // CORSMiddleware : cross origin resource sharing
