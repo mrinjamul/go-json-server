@@ -48,6 +48,15 @@ Test API with web at [http://localhost:8080](http://localhost:8080).
 | GET     | /api/hello | example endpoint                     |
 | GET     | /api/\*    | create \* endpoint from config files |
 
+## TODO
+
+Need to Implement CRUD Operations.
+
+- [x] GET `/api/{endpoint}` Read Opearation
+- [ ] POST `/api/{endpoint}` Create Opearation
+- [ ] PUT `/api/{endpoint}` Update Opearation
+- [ ] DELETE `/api/{endpoint}` Delete Opearation
+
 ## Development
 
 ```shell
