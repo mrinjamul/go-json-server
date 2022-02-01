@@ -1,7 +1,10 @@
 {
   "endpoints": [
     { "route": "ping", "jsonpath": "jsons/ping.json" },
-    { "route": "hello", "jsonpath": "jsons/hello.json" }
+    { "route": "health", "jsonpath": "jsons/health.json" },
+    { "route": "hello", "jsonpath": "jsons/hello.json" },
+    { "route": "questions", "jsonpath": "jsons/questions.json" },
+    { "route": "info", "jsonpath": "jsons/info.json" }
   ],
   "staticpath": "static",
   "port": "8080"

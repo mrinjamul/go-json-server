@@ -1,0 +1,50 @@
+{
+  "message": "success",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of these sorting techniques is implemented using a stack ?",
+      "option_a": "Bubble sort",
+      "option_b": "Selection sort",
+      "option_c": "Insertion sort",
+      "option_d": "Quick sort",
+      "answer": "option_c"
+    },
+    {
+      "id": 2,
+      "question": "START == NULL in a linked list signifies",
+      "option_a": "Overflow",
+      "option_b": "Underflow",
+      "option_c": "Single node",
+      "option_d": "Invalid list",
+      "answer": "option_b"
+    },
+    {
+      "id": 3,
+      "question": "The worst case time required to search an element in a sorted linked list of length n is :",
+      "option_a": "O(n)",
+      "option_b": "O(1)",
+      "option_c": "O(nlogn)",
+      "option_d": "O(logn)",
+      "answer": "option_a"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following statement is FALSE ?",
+      "option_a": "Binary search is not suitable with linked list",
+      "option_b": "A circular linked list has no beginning and no end",
+      "option_c": "Insertion and deletion of elements in linked list takes less time than compared to arrays",
+      "option_d": "Access of elements in linked list takes less time than compared to arrays",
+      "answer": "option_d"
+    },
+    {
+      "id": 5,
+      "question": "Which of the following array sequence of elements represents a max-heap ?",
+      "option_a": "[ 54 , 27 , 29 , 36 , 18 , 11 , 45 , 21 ]",
+      "option_b": "[ 54 , 45 , 36 , 11 , 27 , 18 , 21 , 29 ]",
+      "option_c": "[ 54 , 45 , 36 , 18 , 21 , 27 , 29 , 11 ]",
+      "option_d": "[ 11 , 18 , 21 , 27 , 29 , 36 , 45 , 54 ]",
+      "answer": ""
+    }
+  ]
+}
