@@ -62,7 +62,31 @@ func main() {
 
 	for _, e := range config.Endpoints {
 		jdata := utils.GetJSON(e.JSONPath)
-		r.GET("/api/"+e.Route, func(c *gin.Context) {
+		r.GET("/"+e.Route, func(c *gin.Context) {
+			c.JSON(200, jdata)
+		})
+	}
+	for _, e := range config.Endpoints {
+		jdata := utils.GetJSON(e.JSONPath)
+		r.POST("/"+e.Route, func(c *gin.Context) {
+			c.JSON(200, jdata)
+		})
+	}
+	for _, e := range config.Endpoints {
+		jdata := utils.GetJSON(e.JSONPath)
+		r.PUT("/"+e.Route, func(c *gin.Context) {
+			c.JSON(200, jdata)
+		})
+	}
+	for _, e := range config.Endpoints {
+		jdata := utils.GetJSON(e.JSONPath)
+		r.PATCH("/"+e.Route, func(c *gin.Context) {
+			c.JSON(200, jdata)
+		})
+	}
+	for _, e := range config.Endpoints {
+		jdata := utils.GetJSON(e.JSONPath)
+		r.DELETE("/"+e.Route, func(c *gin.Context) {
 			c.JSON(200, jdata)
 		})
 	}

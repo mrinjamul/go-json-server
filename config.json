@@ -1,6 +1,5 @@
 {
   "endpoints": [
-    { "route": "ping", "jsonpath": "jsons/ping.json" },
     { "route": "health", "jsonpath": "jsons/health.json" },
     { "route": "hello", "jsonpath": "jsons/hello.json" },
     { "route": "questions", "jsonpath": "jsons/questions.json" },
